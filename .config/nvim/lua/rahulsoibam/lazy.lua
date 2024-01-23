@@ -12,9 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "rahulsoibam.plugins" }, { import = "rahulsoibam.plugins.lsp" } }, {
-  install = {
-    colorscheme = { "nightfly" },
-  },
+  -- install = {
+  --   colorscheme = { "nightfly" },
+  -- },
   checker = {
     enabled = true,
     notify = false,
