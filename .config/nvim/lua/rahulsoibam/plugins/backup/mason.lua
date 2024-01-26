@@ -1,3 +1,4 @@
+-- from https://github.com/scottmckendry/Windots/blob/main/nvim/lua/plugins/mason.lua
 return {
     "williamboman/mason.nvim",
     cmd = "Mason",

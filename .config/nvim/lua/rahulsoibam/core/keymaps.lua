@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.keymap.set({ "n", "v" }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -27,10 +27,10 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- this is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -56,17 +56,16 @@ end)
 -- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- diagnostic keymaps
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- clear search highlights
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
-vim.keymap.set("n", "x", '"_x')
-
+vim.keymap.set("n", "x", "\"_x")
 
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
@@ -79,5 +78,3 @@ vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current t
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-
--- vim: ts=2 sts=2 sw=2 et
