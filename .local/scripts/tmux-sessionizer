@@ -4,12 +4,15 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     selected=$(find \
-        ~/projects ~/projects/personal \
+        ~/.dotfiles \
+        ~/.dotfiles/.config \
+        ~/.dotfiles/.local \
+        ~/projects \
+        ~/projects/personal \
         ~/projects/personal/ProjectAgora \
         ~/projects/personal/ProjectAgora/resources \
-        ~/.dotfiles \
         ~/projects/personal/cloned \
-        -mindepth 1 -maxdepth 1 -type d | fzf)
+        -mindepth 0 -maxdepth 1 -type d | grep -v '/.git$' | sort --unique | fzf)
 fi
 
 if [[ -z $selected ]]; then

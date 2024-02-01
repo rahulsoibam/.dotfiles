@@ -13,7 +13,8 @@ return {
                 null_ls.builtins.formatting.stylua.with({
                     extra_args = { "--config-path", vim.fn.expand("~/.config/nvim/.stylua.toml") },
                 }),
-                null_ls.builtins.formatting.beautysh,
+                -- null_ls.builtins.formatting.beautysh,
+                null_ls.builtins.formatting.black,
             },
             on_attach = function(client, bufnr)
                 if client.supports_method("textDocument/formatting") then

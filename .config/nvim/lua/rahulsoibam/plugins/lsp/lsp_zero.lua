@@ -88,7 +88,7 @@ return {
             -- list of servers for mason to install
             ensure_installed = {
                 "lua_ls",
-                "bashls",
+                "bashls", -- need to install shellcheck for linting to work
                 "gopls",
                 "gofumpt",
                 "goimports", -- needed for goimports-reviser to work
@@ -97,6 +97,8 @@ return {
                 "rust_analyzer",
                 "clangd",
                 "stylua",
+                "pyright",
+                "black",
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed

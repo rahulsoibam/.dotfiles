@@ -3,6 +3,7 @@ return {
   lazy = true,
   event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
   config = function()
+    -- TODO: remove this file
     local conform = require("conform")
 
     conform.setup({
